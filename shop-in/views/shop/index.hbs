@@ -1,0 +1,23 @@
+{{# each products }}
+<div class="row">
+    {{# each this }}
+     <div class="card" style="margin: 5px; border-style:none;">
+        <div class="card-body">
+            <img src="{{ this.imagePath}}" alt="..." class="img-thumbnail img-fluid" style="display: block;
+border:0px;  width:220px;height:220px;">
+
+            <h5 class="card-title">{{ this.title }}</h5>
+             <h5 >{{ this.description }}</h5>
+            <div class="row">
+                <div class="col-6 col-sm-3">
+                    <div class="price pull-left ">{{ this.price }}</div>
+                </div>
+                <div class="col-md-4 offset-md-4">
+                    <a href="#" class="btn btn-info pull-right" style="padding: 3px;" role="button">Add to cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{{/each}}
+</div>
+{{/each}}
